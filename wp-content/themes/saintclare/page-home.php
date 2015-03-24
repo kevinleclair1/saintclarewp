@@ -10,8 +10,10 @@ get_header();  ?>
   <div class="picHero">
 	  <div class="container">
 	  	<div class="heroText">
-	  		<h1>Saint Clare</h1>
-	  		<h2>We are a band and stuff</h2>
+		  	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+				<h1><?php the_title(); ?></h1>
+				<h2><?php the_content(); ?></h2>  				      
+		  	<?php endwhile; // end the loop?>
 	  	</div>
 	  </div> <!-- /.container -->
   </div>
