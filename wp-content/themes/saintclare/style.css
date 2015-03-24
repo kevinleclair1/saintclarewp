@@ -166,7 +166,7 @@ img.alignright {
                    Default Styling
    ========================================================================== */
 body {
-  color: blue; }
+  color: red; }
 
 .container {
   max-width: 1200px;
@@ -229,6 +229,45 @@ pre {
   border: 1px solid #ccc; }
 
 /* =============================================================================
+                   Hero
+   ========================================================================== */
+.picHero {
+  height: 100vh;
+  width: 100vw;
+  background: url(http://lorempixel.com/1500/1500) no-repeat center center;
+  position: relative;
+  z-index: -10;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .picHero:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1; }
+
+.heroText {
+  text-align: center; }
+  .heroText h1 {
+    color: white; }
+  .heroText img {
+    width: 70%;
+    margin: 0 auto; }
+
+/* =============================================================================
                    Sidebar
    ========================================================================== */
 .sidebar {
@@ -253,7 +292,12 @@ footer {
    ========================================================================== */
 ul.menu {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
 
 ul.menu li {
   display: inline;

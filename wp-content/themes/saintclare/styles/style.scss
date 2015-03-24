@@ -7,6 +7,7 @@ Author: HackerYou
 Author URI: http://hackeryou.com
 */
 
+$trans : rgba(255,255,255,0.8);
 
 /* =============================================================================
                    Normalize, border box and clearfix
@@ -43,7 +44,7 @@ img.alignright    { padding-left: 5px; }
    ========================================================================== */
 
 body {
-  color:blue;
+  color:red;
 }
 
 .container {
@@ -119,6 +120,42 @@ pre {
   border:1px solid #ccc;
 }
 /* =============================================================================
+                   Hero
+   ========================================================================== */
+.picHero {
+  height: 100vh;
+  width: 100vw;
+  background: url(http://lorempixel.com/1500/1500) no-repeat center center;
+  position: relative;
+  z-index: -10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+  }
+}
+.heroText {
+  text-align: center;
+  h1 {
+    color: white;
+  }
+  h2 {
+    color: $trans;
+  }
+  img {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+/* =============================================================================
                    Sidebar
    ========================================================================== */
 .sidebar {
@@ -144,12 +181,16 @@ footer {
   clear:both;
 }
 
+
 /* =============================================================================
                    Navigation
    ========================================================================== */
   ul.menu {
     margin:0;
     padding:0;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%)
   }
     ul.menu li {
       display:inline;
