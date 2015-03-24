@@ -45,6 +45,8 @@ img.alignright    { padding-left: 5px; }
 
 body {
   color:red;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
 }
 
 .container {
@@ -125,7 +127,8 @@ pre {
 .picHero {
   height: 100vh;
   width: 100vw;
-  background: url(http://lorempixel.com/1500/1500) no-repeat center center;
+  background: url(img/hero.jpg) no-repeat center center fixed;
+  background-size: cover;
   position: relative;
   z-index: -10;
   display: flex;
@@ -144,15 +147,16 @@ pre {
 }
 .heroText {
   text-align: center;
+  font-size: 4.5rem;
   h1 {
     color: white;
+    text-transform: uppercase;
+    margin: 10px 0;
   }
   h2 {
     color: $trans;
-  }
-  img {
-    width: 70%;
-    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 0.4em;
   }
 }
 /* =============================================================================
@@ -190,7 +194,10 @@ footer {
     padding:0;
     position: fixed;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 10px;
   }
     ul.menu li {
       display:inline;
@@ -198,10 +205,12 @@ footer {
     }
 
       ul.menu li a {
-        color:#333;
         padding:10px;
-        background:#333;
-        color:white;
+        color:$trans;
+        transition: 0.3s;
+        &:hover {
+          color: white;
+        }
       }
 
 
