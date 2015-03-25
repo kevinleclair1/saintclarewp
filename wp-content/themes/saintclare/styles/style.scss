@@ -44,13 +44,13 @@ img.alignright    { padding-left: 5px; }
    ========================================================================== */
 
 body {
-  color:red;
+  color: $trans;
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
 }
 
 .container {
-  max-width:1200px;
+  max-width:1040px;
   margin:0 auto;
 }
 
@@ -161,6 +161,50 @@ pre {
     font-weight: 300;
   }
 }
+
+/* =============================================================================
+                   About
+   ========================================================================== */
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: url(img/about.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-size: 2.5rem;
+  position: relative;
+  z-index: -10;
+  color: white;
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+  }
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+  p {
+    font-size: 0.4em;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+.aboutPic {
+  width: 80%;
+  margin: 0 auto;
+  display: block; 
+}
+
 /* =============================================================================
                    Sidebar
    ========================================================================== */
