@@ -352,6 +352,39 @@ pre {
     margin: 10px 0; }
 
 /* =============================================================================
+                   Tour
+   ========================================================================== */
+.tour {
+  background: url(img/tour.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-size: 2rem;
+  padding: 50px 0;
+  position: relative;
+  z-index: -10;
+  color: white; }
+  .tour:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1; }
+  .tour h4 {
+    font-size: 1.5em;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: white; }
+  .tour .tourDate {
+    text-transform: uppercase; }
+    .tour .tourDate p {
+      display: inline-block; }
+    .tour .tourDate .support {
+      display: block; }
+
+/* =============================================================================
                    Sidebar
    ========================================================================== */
 .sidebar {
