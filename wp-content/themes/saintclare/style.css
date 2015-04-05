@@ -357,10 +357,10 @@ pre {
 .tour {
   background: url(img/tour.jpg) no-repeat center center fixed;
   background-size: cover;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 50px 0;
   position: relative;
-  z-index: -10;
+  z-index: 0;
   color: white; }
   .tour:before {
     position: absolute;
@@ -374,15 +374,56 @@ pre {
   .tour h4 {
     font-size: 1.5em;
     margin: 0;
+    margin-bottom: 40px;
     text-transform: uppercase;
     text-align: center;
     color: white; }
-  .tour .tourDate {
-    text-transform: uppercase; }
-    .tour .tourDate p {
-      display: inline-block; }
-    .tour .tourDate .support {
-      display: block; }
+
+.tourDate {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-bottom: 20px; }
+  .tourDate .support {
+    display: block;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.7em; }
+  .tourDate .top {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px; }
+    .tourDate .top p, .tourDate .top .rsvpWrap {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 0 200px;
+          -ms-flex: 1 0 200px;
+              flex: 1 0 200px; }
+    .tourDate .top p:first-child {
+      margin-left: 0; }
+    .tourDate .top .rsvpWrap {
+      margin-right: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0.5;
+      -webkit-flex: 0.5 0 200px;
+          -ms-flex: 0.5 0 200px;
+              flex: 0.5 0 200px;
+      text-align: right; }
+  .tourDate a {
+    padding: 10px 15px;
+    border: 2px solid white;
+    color: white;
+    -webkit-transition: 0.3s;
+            transition: 0.3s;
+    font-size: 0.6em;
+    margin: auto;
+    margin-right: 0; }
+    .tourDate a:hover {
+      background: white;
+      color: black; }
 
 /* =============================================================================
                    Sidebar
@@ -419,7 +460,8 @@ ul.menu {
   text-transform: uppercase;
   margin-top: 10px;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  z-index: 100; }
 
 ul.menu li {
   display: inline;

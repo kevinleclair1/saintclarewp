@@ -67,10 +67,14 @@ get_header();  ?>
   			<?php while( has_sub_field('tour') ): ?>
   			  <!-- Our sub fields go here -->
   			 <div class="tourDate">
-	  			 <p class="date"><?php the_sub_field('date'); ?></p>
-	  			 <p class"venue"><?php the_sub_field('venue'); ?></p>
-	  			 <p class='cityprov'><?php the_sub_field('city_prov'); ?></p>
-	  			 <a class="rsvp" href="<?php the_sub_field('rsvp_link')?>">RSVP</a>
+  			   	 <div class="top">
+		  			 <p class="date"><?php the_sub_field('date'); ?></p>
+		  			 <p class"venue"><?php the_sub_field('venue'); ?></p>
+		  			 <p class='cityprov'><?php the_sub_field('city_prov'); ?></p>
+		  			 <div class="rsvpWrap">
+			  			 <a target="_blank" class="rsvp" href="<?php the_sub_field('rsvp_link')?>">RSVP</a>
+		  			 </div>
+	  			 </div>
 	  			 <p class='support'>W/ <?php the_sub_field('other_bands');?></p>
   			 </div>
   			<?php endwhile; ?>
