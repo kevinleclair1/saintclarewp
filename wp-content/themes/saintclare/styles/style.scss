@@ -50,7 +50,7 @@ body {
 }
 
 .container {
-  max-width:1040px;
+  max-width:1000px;
   margin:0 auto;
 }
 
@@ -132,8 +132,9 @@ pre {
   position: relative;
   z-index: -10;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  .container {
+    margin: auto;
+  }
   &:before {
     position: absolute;
     left: 0;
@@ -192,7 +193,7 @@ pre {
   p {
     font-size: 0.4em;
     background: rgba(0,0,0,0.5);
-    padding: 10px 50px;
+    padding: 10px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     margin: 0 auto;
@@ -203,6 +204,45 @@ pre {
   width: 80%;
   margin: 0 auto;
   display: block; 
+}
+
+/* =============================================================================
+                   Music
+   ========================================================================== */
+.music {
+  background: black;
+  font-size: 2rem;
+  padding: 50px 0;
+  h4 {
+    font-size: 1.5em;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+  }
+}
+.stream {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+.musicWrap {
+  flex: 1 1 250px;
+  padding: 20px;
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+  p {
+    font-size: 0.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+  }
+  h5 {
+    text-transform: uppercase;
+    color: white;
+    margin: 10px 0;
+  }
 }
 
 /* =============================================================================
