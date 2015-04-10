@@ -34,7 +34,7 @@ get_header();  ?>
 		<?php endwhile; //end custom loop?>
 		<?php wp_reset_postdata(); // return env back to regular?>
   	</div>
-  </section>
+  </section> <!-- end of about -->
   <section class="music" id="music">
   	<h4>Music</h4>
   	<div class="container stream">
@@ -55,7 +55,7 @@ get_header();  ?>
 		<?php endwhile; //end custom loop?>
 		<?php wp_reset_postdata(); // return env back to regular?>
   	</div>
-  </section>
+  </section> <!-- end of music -->
   <section class="tour" id="tour">
   	<h4>Tour Dates</h4>
   	<div class="container tourWrap">
@@ -78,6 +78,25 @@ get_header();  ?>
 	  			 <p class='support'>W/ <?php the_sub_field('other_bands');?></p>
   			 </div>
   			<?php endwhile; ?>
+  		<?php endwhile; //end custom loop?>
+  		<?php wp_reset_postdata(); // return env back to regular?>
+  	</div>
+  </section> <!-- end of tour -->
+  <section class="contact">
+  	<h4>Contact</h4>
+  	<div class="container contactWrap">
+  		<?php $latestPosts= new WP_Query (array(
+  		'post_type' => 'contact',
+  		'posts_per_page' => -1
+  		)); ?>
+  		<?php if($latestPosts->have_posts()) while($latestPosts ->have_posts()) : $latestPosts->the_post(); ?>
+  			<div class="contactText">
+	  			<?php the_content(); ?>
+	  			<p class="contactInfo">
+	  				<span><?php the_field('name') ?></span>:
+	  				<a href="mailto:<?php the_field('email') ?>"><?php the_field('email') ?></a>
+	  			</p>
+			</div>
   		<?php endwhile; //end custom loop?>
   		<?php wp_reset_postdata(); // return env back to regular?>
   	</div>

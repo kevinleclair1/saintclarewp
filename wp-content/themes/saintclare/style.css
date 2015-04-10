@@ -313,7 +313,7 @@ pre {
                    Music
    ========================================================================== */
 .music {
-  background: black;
+  background: #222222;
   font-size: 2rem;
   padding: 50px 0; }
   .music h4 {
@@ -339,6 +339,12 @@ pre {
       -ms-flex: 1 1 250px;
           flex: 1 1 250px;
   padding: 20px; }
+  .musicWrap:nth-child(3n+1) {
+    padding-left: 0;
+    padding-right: 40px; }
+  .musicWrap:nth-child(3n) {
+    padding-right: 0;
+    padding-left: 40px; }
   .musicWrap iframe {
     display: block;
     margin: 0 auto; }
@@ -357,7 +363,7 @@ pre {
 .tour {
   background: url(img/tour.jpg) no-repeat center center fixed;
   background-size: cover;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   padding: 50px 0;
   position: relative;
   z-index: 0;
@@ -387,7 +393,7 @@ pre {
     display: block;
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 0.7em; }
+    font-size: 0.8em; }
   .tourDate .top {
     display: -webkit-box;
     display: -webkit-flex;
@@ -426,6 +432,36 @@ pre {
       color: black; }
 
 /* =============================================================================
+                   CONTACT
+   ========================================================================== */
+.contact {
+  background: #222222;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 50px 0;
+  color: white; }
+  .contact h4 {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white; }
+
+.contactText {
+  font-size: 0.8em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300; }
+  .contactText a {
+    color: white;
+    padding: 5px;
+    -webkit-transition: 0.3s;
+            transition: 0.3s; }
+    .contactText a:hover {
+      color: black;
+      background: white; }
+
+/* =============================================================================
                    Sidebar
    ========================================================================== */
 .sidebar {
@@ -443,25 +479,27 @@ pre {
                    Footer
    ========================================================================== */
 footer {
-  clear: both; }
+  clear: both;
+  background: #222222; }
 
 /* =============================================================================
                    Navigation
    ========================================================================== */
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100; }
+
 ul.menu {
   margin: 0;
   padding: 0;
-  position: fixed;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  text-align: center;
   font-size: 1rem;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin: 10px 0;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  z-index: 100; }
+  font-weight: 300; }
 
 ul.menu li {
   display: inline;
