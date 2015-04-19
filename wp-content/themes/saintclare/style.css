@@ -270,6 +270,30 @@ pre {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300; }
 
+.arrow {
+  margin: 0;
+  font-size: 0.8em; }
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes flash {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
 /* =============================================================================
                    About
    ========================================================================== */
@@ -480,7 +504,40 @@ pre {
    ========================================================================== */
 footer {
   clear: both;
-  background: #222222; }
+  background: #222222;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  position: relative; }
+  footer .container {
+    padding-bottom: 10px; }
+
+.socialLink {
+  display: inline-block;
+  font-size: 1.6em;
+  margin: 0 10px; }
+  .socialLink a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transition: 0.3s;
+            transition: 0.3s; }
+    .socialLink a:hover {
+      color: white; }
+
+.footerByline {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 0.5em; }
+  .footerByline a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transition: 0.3s;
+            transition: 0.3s; }
+    .footerByline a:hover {
+      color: white; }
 
 /* =============================================================================
                    Navigation

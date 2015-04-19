@@ -1,6 +1,16 @@
 <footer>
+<p class="footerByline">&copy; Saint Clare <?php echo date('Y'); ?> Built by <a href="http://kevinleclair.ca">Kevin LeClair</a></p>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+	<?php $latestPosts = new WP_Query(array(
+	'post_type' => 'social', //we only want blog posts
+	'posts_per_page' => -1
+	)); ?>
+	<?php if($latestPosts->have_posts()) while($latestPosts ->have_posts()) : $latestPosts->the_post(); ?>
+		<div class="socialLink">
+			 <a href="<?php the_field('social_link') ?>"><?php the_field('font_awesome_markup') ?></a> 
+		</div>
+	<?php endwhile; //end custom loop?>
+	<?php wp_reset_postdata(); // return env back to regular?>
   </div>
 </footer>
 

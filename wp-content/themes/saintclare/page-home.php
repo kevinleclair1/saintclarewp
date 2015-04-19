@@ -14,6 +14,7 @@ get_header();  ?>
 				<h1><?php the_title(); ?></h1>
 				<h2><?php the_content(); ?></h2>  				      
 		  	<?php endwhile; // end the loop?>
+		  	<p class='arrow'><i class="fa fa-arrow-circle-down"></i></p>
 	  	</div>
 	  </div> <!-- /.container -->
   </div>
