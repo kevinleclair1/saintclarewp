@@ -15,4 +15,7 @@ $(function(){
 			$('header').removeClass("headerB");
 		}
 	})
+	$('.mobileNav').on('click', function(){
+		$('.menu').fadeIn();
+	});
 });

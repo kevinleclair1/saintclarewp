@@ -8,7 +8,7 @@ Author URI: http://hackeryou.com
 */
 
 $trans : rgba(255,255,255,0.8);
-$darkImage : linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+$darkImage : linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 @import '_grid';
 /* =============================================================================
                    Normalize, border box and clearfix
@@ -185,12 +185,12 @@ pre {
     margin-top: 0;
   }
   p {
-    font-size: 0.4em;
+    font-size: 0.5em;
     background: rgba(0,0,0,0.5);
     padding: 10px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    margin: 0 auto;
+    margin: 0 20px;
     margin-top: 20px;
   }
 }
@@ -208,7 +208,7 @@ pre {
   font-size: 2rem;
   padding: 50px 0;
   h4 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin: 0;
     text-transform: uppercase;
     text-align: center;
@@ -216,7 +216,7 @@ pre {
   }
 }
 .stream {
-  padding: 50px 0;
+  padding: 50px 5px;
 }
 .musicWrap {
   @include column(4);
@@ -225,7 +225,7 @@ pre {
     margin: 0 auto;
   }
   p {
-    font-size: 0.5em;
+    font-size: 0.6em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
   }
@@ -258,7 +258,6 @@ pre {
 }
 .tourDate {
   text-transform: uppercase;
-  font-size: 0.8em;
   margin-bottom: 20px;
   .support {
     display: block;
@@ -305,7 +304,7 @@ pre {
   background: rgb(34, 34, 34);
   text-align: center; 
   font-size: 1.5rem;
-  padding: 50px 0;
+  padding: 50px 10px;
   color: white;
   h4 {
       font-size: 1.5em;
@@ -359,14 +358,15 @@ footer {
   color: white;
   font-size: 1.5rem;
   position: relative;
+  padding: 0 10px;
   .container {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
   }
 }
 .socialLink {
   display: inline-block;
-  font-size: 1.6em;
-  margin: 0 10px;
+  font-size: 2em;
+  margin: 0 20px;
   a {
     text-decoration: none;
     color: $trans;
@@ -380,8 +380,8 @@ footer {
   display: block;
   bottom: 0;
   margin: 0;
-  margin-bottom: 10px;
-  font-size: 0.5em;
+  margin-bottom: 20px;
+  font-size: 0.7em;
   a {
     text-decoration: none;
     color: $trans;
@@ -407,6 +407,12 @@ footer {
   .headerB {
     background: rgba(0,0,0,0.4);
   }
+  
+  .mobileNav {
+    display: none;
+    font-size: 50px;
+    padding-left: 10px;
+  }
 
   ul.menu {
     margin:0;
@@ -414,7 +420,7 @@ footer {
     // left: 50%;
     // transform: translateX(-50%);
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     margin: 10px 0;
     font-family: 'Open Sans', sans-serif;
@@ -565,14 +571,14 @@ p.form-allowed-tags, .nocomments { display:none; }
 
 
 //Media Queris 
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .tourDate {
     margin-left: 20px;
     margin-right: 20px;
   }
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .musicWrap {
     @include column(6);
   }
@@ -581,7 +587,7 @@ p.form-allowed-tags, .nocomments { display:none; }
   }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   html {
     font-size: 14px;
   }
@@ -599,9 +605,11 @@ p.form-allowed-tags, .nocomments { display:none; }
   .tourDate .top p {
     @include column(12);
     margin-left: 0;
+    margin-bottom: 10px;
   }
-  .date {
+  .tourDate .top .date {
     @include column(12);
+    margin-bottom: 20px;
   }
   .rsvpWrap {
     position: absolute;
@@ -614,19 +622,31 @@ p.form-allowed-tags, .nocomments { display:none; }
   }
 }
 
-@media (max-width: 475px) {
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 0 10px;
+  }
   .musicWrap {
-    @include column(12);
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    p {
+      font-size: 0.5em;
+    }
   }
   .about, 
   .music {
     font-size: 3rem;
   }
+  .about p {
+    font-size: 0.45em;
+    padding: 10px 10px;
+  }
   .arrow {
     font-size: 1.5em;
   }
   .aboutPic {
-    margin: 0 10px;
+    padding: 0 10px;
     width: 100%;
   }
   .socialLink {
@@ -638,8 +658,23 @@ p.form-allowed-tags, .nocomments { display:none; }
   }
 }
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   .heroText {
-    font-size: 3rem;
+    font-size: 3.5rem;
+  }
+  .mobileNav {
+    display: block;
+  }
+  ul.menu {
+    display: none;
+    li {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  html {
+    font-size: 12px;
   }
 }

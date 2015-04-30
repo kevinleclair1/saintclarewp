@@ -19,8 +19,10 @@
 <body <?php body_class(); ?>>
 
 <header>
+  <div class="mobileNav">
+    <span>&amp;</span>
+  </div>
   <div class="container">
-
     <?php wp_nav_menu( array(
       'container' => false,
       'theme_locations' => 'primary'
