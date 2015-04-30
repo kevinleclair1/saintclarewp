@@ -46,7 +46,7 @@ get_header();  ?>
 	
 		<?php if($latestPosts->have_posts()) while($latestPosts ->have_posts()) : $latestPosts->the_post(); ?>
 			<div class="musicWrap">
-				<img src="http://lorempixel.com/300/300" alt="">
+				<img src="<?php the_field('album_art')?>" alt="">
 				<h5><?php the_title(); ?></h5> 
 				<div class="bcWrap">
 					<?php the_field('iframe'); ?>

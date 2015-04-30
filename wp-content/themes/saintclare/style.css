@@ -236,25 +236,16 @@ pre {
 .picHero {
   height: 100vh;
   width: 100vw;
-  background: url(img/hero.jpg) no-repeat center center fixed;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/hero.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/hero.jpg) no-repeat center center fixed;
   background-size: cover;
   position: relative;
-  z-index: -10;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
   .picHero .container {
     margin: auto; }
-  .picHero:before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    content: '';
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1; }
 
 .heroText {
   text-align: center;
@@ -273,6 +264,10 @@ pre {
 .arrow {
   margin: 0;
   font-size: 0.8em; }
+  .arrow .fa {
+    -webkit-animation: flash 3s linear infinite;
+            animation: flash 3s linear infinite;
+    cursor: pointer; }
 
 @-webkit-keyframes flash {
   0% {
@@ -300,21 +295,12 @@ pre {
 .about {
   padding-top: 50px;
   padding-bottom: 50px;
-  background: url(img/about.jpg) no-repeat center center fixed;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/about.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/about.jpg) no-repeat center center fixed;
   background-size: cover;
   font-size: 2.5rem;
   position: relative;
-  z-index: -10;
   color: white; }
-  .about:before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    content: '';
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1; }
   .about h3 {
     text-align: center;
     text-transform: uppercase;
@@ -385,22 +371,13 @@ pre {
                    Tour
    ========================================================================== */
 .tour {
-  background: url(img/tour.jpg) no-repeat center center fixed;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/tour.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/tour.jpg) no-repeat center center fixed;
   background-size: cover;
   font-size: 1.5rem;
   padding: 50px 0;
   position: relative;
-  z-index: 0;
   color: white; }
-  .tour:before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    content: '';
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1; }
   .tour h4 {
     font-size: 1.5em;
     margin: 0;
@@ -545,8 +522,13 @@ footer {
 header {
   position: fixed;
   width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 100; }
+  z-index: 100;
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+  background: none; }
+
+.headerB {
+  background: rgba(0, 0, 0, 0.4); }
 
 ul.menu {
   margin: 0;
