@@ -6,6 +6,15 @@ Version: 1.0
 Author: HackerYou
 Author URI: http://hackeryou.com
 */
+body {
+  width: 100%;
+  *zoom: 1; }
+  body:before, body:after {
+    content: "";
+    display: table; }
+  body:after {
+    clear: both; }
+
 /* =============================================================================
                    Normalize, border box and clearfix
    ========================================================================== */
@@ -165,10 +174,12 @@ img.alignright {
 /* =============================================================================
                    Default Styling
    ========================================================================== */
+html {
+  font-size: 15px; }
+
 body {
   color: rgba(255, 255, 255, 0.8);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px; }
+  font-family: 'Montserrat', sans-serif; }
 
 .container {
   max-width: 1000px;
@@ -334,27 +345,13 @@ pre {
     color: white; }
 
 .stream {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
   padding: 50px 0; }
 
 .musicWrap {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 250px;
-      -ms-flex: 1 1 250px;
-          flex: 1 1 250px;
-  padding: 20px; }
-  .musicWrap:nth-child(3n+1) {
-    padding-left: 0;
-    padding-right: 40px; }
-  .musicWrap:nth-child(3n) {
-    padding-right: 0;
-    padding-left: 40px; }
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin: 0 1.04167%; }
   .musicWrap iframe {
     display: block;
     margin: 0 auto; }
@@ -502,8 +499,7 @@ footer {
       color: white; }
 
 .footerByline {
-  position: absolute;
-  right: 10px;
+  display: block;
   bottom: 0;
   margin: 0;
   margin-bottom: 10px;
@@ -723,3 +719,72 @@ p.form-allowed-tags, .nocomments {
 
 #respond p, #comments-list ul #respond {
   margin: 0; }
+
+@media (max-width: 1000px) {
+  .tourDate {
+    margin-left: 20px;
+    margin-right: 20px; } }
+
+@media (max-width: 800px) {
+  .musicWrap {
+    display: inline;
+    float: left;
+    width: 47.91667%;
+    margin: 0 1.04167%; }
+  .tourDate .top p {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 130px;
+        -ms-flex: 1 0 130px;
+            flex: 1 0 130px; } }
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px; }
+  .heroText {
+    font-size: 4em; }
+  .tour, .contact {
+    font-size: 2rem; }
+  .tourDate .top {
+    display: block;
+    position: relative; }
+  .tourDate .top p {
+    display: inline;
+    float: left;
+    width: 97.91667%;
+    margin: 0 1.04167%;
+    margin-left: 0; }
+  .date {
+    display: inline;
+    float: left;
+    width: 97.91667%;
+    margin: 0 1.04167%; }
+  .rsvpWrap {
+    position: absolute;
+    right: 0;
+    top: 50%; }
+  .socialLink {
+    font-size: 2.5em;
+    margin: 0 20px; } }
+
+@media (max-width: 475px) {
+  .musicWrap {
+    display: inline;
+    float: left;
+    width: 97.91667%;
+    margin: 0 1.04167%; }
+  .about, .music {
+    font-size: 3rem; }
+  .arrow {
+    font-size: 1.5em; }
+  .aboutPic {
+    margin: 0 10px;
+    width: 100%; }
+  .socialLink {
+    font-size: 3.7em;
+    margin: 0 20px; }
+  .footerByline {
+    font-size: 1em; } }
+
+@media (max-width: 400px) {
+  .heroText {
+    font-size: 3rem; } }

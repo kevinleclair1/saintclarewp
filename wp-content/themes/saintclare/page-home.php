@@ -38,7 +38,7 @@ get_header();  ?>
   </section> <!-- end of about -->
   <section class="music" id="music">
   	<h4>Music</h4>
-  	<div class="container stream">
+  	<div class="container clearfix stream">
   		<?php $latestPosts = new WP_Query(array(
 	    	'post_type' => 'music', //we only want blog posts
 	    	'posts_per_page' => -1
