@@ -1,5 +1,5 @@
 /*
-Theme Name: HackerYou Starter Theme
+Theme Name: Saint Clare
 Theme URI: http://hackeryou.com;
 Description: Starter theme for building any website. Created by HackerYou. Rename this to your own theme page.
 Version: 1.0
@@ -8,7 +8,7 @@ Author URI: http://hackeryou.com
 */
 
 $trans : rgba(255,255,255,0.8);
-$darkImage : linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+$darkImage : linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 @import '_grid';
 /* =============================================================================
                    Normalize, border box and clearfix
@@ -601,6 +601,7 @@ p.form-allowed-tags, .nocomments { display:none; }
   .tourDate .top {
     display: block;
     position: relative;
+    font-size: 0.9em;
   }
   .tourDate .top p {
     @include column(12);
@@ -614,10 +615,10 @@ p.form-allowed-tags, .nocomments { display:none; }
   .rsvpWrap {
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 0;
   }
   .socialLink {
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0 20px;
   }
 }
@@ -640,7 +641,7 @@ p.form-allowed-tags, .nocomments { display:none; }
   }
   .about p {
     font-size: 0.45em;
-    padding: 10px 10px;
+    padding: 10px 0;
   }
   .arrow {
     font-size: 1.5em;
@@ -649,16 +650,12 @@ p.form-allowed-tags, .nocomments { display:none; }
     padding: 0 10px;
     width: 100%;
   }
-  .socialLink {
-    font-size: 3.7em;
-    margin: 0 20px;
-  }
   .footerByline {
     font-size: 1em;
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .heroText {
     font-size: 3.5rem;
   }
@@ -667,6 +664,7 @@ p.form-allowed-tags, .nocomments { display:none; }
   }
   ul.menu {
     display: none;
+    font-size: 2rem;
     li {
       display: block;
     }
@@ -676,5 +674,14 @@ p.form-allowed-tags, .nocomments { display:none; }
 @media only screen and (max-width: 350px) {
   html {
     font-size: 12px;
+  }
+  .socialLink {
+    margin: 0px 5px;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .socialLink {
+    margin: 0px 3px;
   }
 }

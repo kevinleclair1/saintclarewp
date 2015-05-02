@@ -68,7 +68,7 @@ get_header();  ?>
   			<?php while( has_sub_field('tour') ): ?>
   			  <!-- Our sub fields go here -->
   			 <div class="tourDate">
-  			   	 <div class="top">
+  			   	 <div class="top clearfix">
 		  			 <p class="date"><?php the_sub_field('date'); ?></p>
 		  			 <p class"venue"><?php the_sub_field('venue'); ?></p>
 		  			 <p class='cityprov'><?php the_sub_field('city_prov'); ?></p>
@@ -83,7 +83,7 @@ get_header();  ?>
   		<?php wp_reset_postdata(); // return env back to regular?>
   	</div>
   </section> <!-- end of tour -->
-  <section class="contact">
+  <section class="contact" id="contact">
   	<h4>Contact</h4>
   	<div class="container contactWrap">
   		<?php $latestPosts= new WP_Query (array(

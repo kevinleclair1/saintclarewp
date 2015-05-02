@@ -16,6 +16,11 @@ $(function(){
 		}
 	})
 	$('.mobileNav').on('click', function(){
-		$('.menu').fadeIn();
+		$('.menu').slideToggle();
+	});
+	$('.menu-item').on('click', function(){
+		if ($('.menu').css('display') == 'block') {
+			$('.menu').slideToggle();
+		}
 	});
 });

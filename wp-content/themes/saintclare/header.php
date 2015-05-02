@@ -20,7 +20,7 @@
 
 <header>
   <div class="mobileNav">
-    <span>&amp;</span>
+    <span><i class="fa fa-bars"></i></span>
   </div>
   <div class="container">
     <?php wp_nav_menu( array(

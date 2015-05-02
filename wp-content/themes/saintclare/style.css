@@ -1,5 +1,5 @@
 /*
-Theme Name: HackerYou Starter Theme
+Theme Name: Saint Clare
 Theme URI: http://hackeryou.com;
 Description: Starter theme for building any website. Created by HackerYou. Rename this to your own theme page.
 Version: 1.0
@@ -247,8 +247,8 @@ pre {
 .picHero {
   height: 100vh;
   width: 100vw;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/hero.jpg) no-repeat center center fixed;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/hero.jpg) no-repeat center center fixed;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg) no-repeat center center fixed;
   background-size: cover;
   position: relative;
   display: -webkit-box;
@@ -306,8 +306,8 @@ pre {
 .about {
   padding-top: 50px;
   padding-bottom: 50px;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/about.jpg) no-repeat center center fixed;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/about.jpg) no-repeat center center fixed;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/about.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/about.jpg) no-repeat center center fixed;
   background-size: cover;
   font-size: 2.5rem;
   position: relative;
@@ -368,8 +368,8 @@ pre {
                    Tour
    ========================================================================== */
 .tour {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/tour.jpg) no-repeat center center fixed;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/tour.jpg) no-repeat center center fixed;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/tour.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/tour.jpg) no-repeat center center fixed;
   background-size: cover;
   font-size: 1.5rem;
   padding: 50px 0;
@@ -751,7 +751,8 @@ p.form-allowed-tags, .nocomments {
     font-size: 2rem; }
   .tourDate .top {
     display: block;
-    position: relative; }
+    position: relative;
+    font-size: 0.9em; }
   .tourDate .top p {
     display: inline;
     float: left;
@@ -768,9 +769,9 @@ p.form-allowed-tags, .nocomments {
   .rsvpWrap {
     position: absolute;
     right: 0;
-    top: 50%; }
+    top: 0; }
   .socialLink {
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0 20px; } }
 
 @media only screen and (max-width: 500px) {
@@ -786,28 +787,32 @@ p.form-allowed-tags, .nocomments {
     font-size: 3rem; }
   .about p {
     font-size: 0.45em;
-    padding: 10px 10px; }
+    padding: 10px 0; }
   .arrow {
     font-size: 1.5em; }
   .aboutPic {
     padding: 0 10px;
     width: 100%; }
-  .socialLink {
-    font-size: 3.7em;
-    margin: 0 20px; }
   .footerByline {
     font-size: 1em; } }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .heroText {
     font-size: 3.5rem; }
   .mobileNav {
     display: block; }
   ul.menu {
-    display: none; }
+    display: none;
+    font-size: 2rem; }
     ul.menu li {
       display: block; } }
 
 @media only screen and (max-width: 350px) {
   html {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .socialLink {
+    margin: 0px 5px; } }
+
+@media only screen and (max-width: 290px) {
+  .socialLink {
+    margin: 0px 3px; } }
