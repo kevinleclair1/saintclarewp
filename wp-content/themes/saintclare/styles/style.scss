@@ -3,17 +3,21 @@ Theme Name: Saint Clare
 Theme URI: http://hackeryou.com;
 Description: Starter theme for building any website. Created by HackerYou. Rename this to your own theme page.
 Version: 1.0
-Author: HackerYou
+Author: Kevin LeClair
 Author URI: http://hackeryou.com
 */
 
 $trans : rgba(255,255,255,0.8);
 $darkImage : linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+
+$mainText : #fff;
+$linkText : #FEFFC0;
+
 @import '_grid';
 /* =============================================================================
                    Normalize, border box and clearfix
    ========================================================================== */
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{$mainText-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
 input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -123,6 +127,23 @@ pre {
   border-radius: 4px;
   border:1px solid #ccc;
 }
+
+section {
+  background: rgb(34, 34, 34);
+  font-size: 2rem;
+  padding: 30px 0;
+  h4 {
+    font-size: 1.3em;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: $mainText;
+    margin-bottom: 30px;
+  }
+}
+.container {
+  padding: 0 20px;
+}
 /* =============================================================================
                    Hero
    ========================================================================== */
@@ -141,7 +162,7 @@ pre {
   text-align: center;
   font-size: 4.5rem;
   h1 {
-    color: white;
+    color: $mainText;
     text-transform: uppercase;
     margin: 10px 0;
   }
@@ -172,25 +193,23 @@ pre {
                    About
    ========================================================================== */
 .about {
-  padding-top: 50px;
-  padding-bottom: 50px;
   background: $darkImage, url(img/about.jpg) no-repeat center center fixed;
   background-size: cover;
-  font-size: 2.5rem;
+  font-size: 2rem;
   position: relative;
-  color: white;
+  color: $mainText;
   h3 {
     text-align: center;
     text-transform: uppercase;
     margin-top: 0;
+    margin-bottom: 30px;
   }
   p {
-    font-size: 0.5em;
+    font-size: 0.6em;
     background: rgba(0,0,0,0.5);
     padding: 10px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    margin: 0 20px;
     margin-top: 20px;
   }
 }
@@ -206,17 +225,7 @@ pre {
 .music {
   background: rgb(34, 34, 34);
   font-size: 2rem;
-  padding: 50px 0;
-  h4 {
-    font-size: 1.3em;
-    margin: 0;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-  }
-}
-.stream {
-  padding: 50px 5px;
+  padding: 30px 0;
 }
 .musicWrap {
   @include column(4);
@@ -231,7 +240,7 @@ pre {
   }
   h5 {
     text-transform: uppercase;
-    color: white;
+    color: $mainText;
     margin: 10px 0;
   }
 }
@@ -244,32 +253,31 @@ pre {
   background: $darkImage, url(img/tour.jpg) no-repeat center center fixed;
   background-size: cover;
   font-size: 1.5rem;
-  padding: 50px 0;
   position: relative;
-  color: white;
+  color: $mainText;
   h4 {
     font-size: 1.5em;
     margin: 0;
     margin-bottom:40px;
     text-transform: uppercase;
     text-align: center;
-    color: white;
+    color: $mainText;
   }
 }
 .tourDate {
   text-transform: uppercase;
   margin-bottom: 20px;
   .support {
+    @include column(12);
     display: block;
-    margin: 0;
     color: rgba(255,255,255,0.8);
     font-size: 0.8em;
   }
   .top {
+    @include column(12);
     display: flex;
-    margin-bottom: 20px;
     p, .rsvpWrap {
-      flex: 1 0 200px;
+      flex: 1 0 100px;
     }
     p:first-child {
       margin-left: 0;
@@ -277,22 +285,70 @@ pre {
     .rsvpWrap {
       margin-right: 0;
       display: flex;
-      flex: 0.5 0 200px;
+      flex: 0.5 0 auto;
       text-align: right;
     }
   }
   a {
     padding: 10px 15px;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid $mainText;
+    color: $mainText;
     transition: 0.3s;
     font-size: 0.6em;
     margin: auto;
     margin-right: 0;
     &:hover {
-      background: white;
+      background: $mainText;
       color: black;
     }
+  }
+}
+
+/* =============================================================================
+                   PRESS
+   ========================================================================== */
+
+.press {
+  background: rgb(34, 34, 34);
+  font-size: 2rem;
+  h4 {
+    font-size: 1.3em;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: $mainText;
+    margin-bottom: 30px;
+  }
+}
+
+.pressSingle {
+  @include column(4);
+  .date {
+    color: $trans;
+    font-size: 0.5em;
+    margin-bottom: 0;
+  }
+  .title {
+    text-transform: uppercase;
+    margin: 5px 0;
+    color: $mainText;
+  }
+  .subTitle {
+    font-size: 0.5em;
+    color: $trans;
+  }
+  .pressContent {
+    font-size: 0.6em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    p {
+      margin: 0;
+    }
+  }
+  .pressLink {
+    color: $linkText;
+    text-transform: uppercase;
+    font-size: 0.4em;
   }
 }
 
@@ -302,31 +358,38 @@ pre {
 
 .contact {
   background: rgb(34, 34, 34);
-  text-align: center; 
-  font-size: 1.5rem;
-  padding: 50px 10px;
-  color: white;
+  font-size: 2rem;
+  padding-top: 0;
+  color: $mainText;
+  text-align: center;
   h4 {
+      padding: 30px 0;
       font-size: 1.5em;
       margin: 0;
-      margin-bottom:40px;
       text-transform: uppercase;
       text-align: center;
-      color: white;
+      color: $mainText;
     }
 }
 .contactText {
-  font-size: 0.8em;
+  font-size: 0.6em;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  p {
+    margin: 0;
+  }
   a {
-    color: white;
+    color: $mainText;
     padding: 5px;
     transition: 0.3s; 
     &:hover {
       color: black;
-      background: white;
+      background: $mainText;
     }
+  }
+  .contactInfo {
+    margin-bottom: 0;
+    margin-top: 5px;
   }
 }
 /* =============================================================================
@@ -355,24 +418,32 @@ footer {
   clear:both;
   background: rgb(34, 34, 34);
   text-align: center;
-  color: white;
+  color: $mainText;
   font-size: 1.5rem;
   position: relative;
   padding: 0 10px;
   .container {
     padding-bottom: 30px;
+    margin-top: 20px;
   }
 }
+
+.socialWrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
 .socialLink {
   display: inline-block;
-  font-size: 2em;
-  margin: 0 20px;
+  font-size: 1.5em;
+  margin: auto;
   a {
     text-decoration: none;
     color: $trans;
     transition: 0.3s;
     &:hover { 
-      color: white;
+      color: $mainText;
     }
   }
 }
@@ -387,7 +458,7 @@ footer {
     color: $trans;
     transition: 0.3s;
     &:hover {
-      color: white;
+      color: $mainText;
     }
   }
 }
@@ -405,13 +476,14 @@ footer {
   }
 
   .headerB {
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.7);
   }
   
   .mobileNav {
     display: none;
-    font-size: 50px;
+    font-size: 35px;
     padding-left: 10px;
+    color: white;
   }
 
   ul.menu {
@@ -425,6 +497,7 @@ footer {
     margin: 10px 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    color: $mainText;
   }
     ul.menu li {
       display:inline;
@@ -436,7 +509,7 @@ footer {
         color:$trans;
         transition: 0.3s;
         &:hover {
-          color: white;
+          color: $mainText;
         }
       }
 
@@ -570,13 +643,7 @@ p.form-allowed-tags, .nocomments { display:none; }
 #respond p, #comments-list ul #respond { margin:0; }
 
 
-//Media Queris 
-@media only screen and (max-width: 1000px) {
-  .tourDate {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
+//Media Queries
 
 @media only screen and (max-width: 800px) {
   .musicWrap {
@@ -584,6 +651,12 @@ p.form-allowed-tags, .nocomments { display:none; }
   }
   .tourDate .top p {
     flex: 1 0 130px;
+  }
+  .tourDate .top .venue {
+    flex: 2 0 130px;
+  }
+  .pressSingle {
+    @include column(6);
   }
 }
 
@@ -601,12 +674,15 @@ p.form-allowed-tags, .nocomments { display:none; }
   .tourDate .top {
     display: block;
     position: relative;
-    font-size: 0.9em;
+    font-size: 0.6em;
   }
   .tourDate .top p {
     @include column(12);
     margin-left: 0;
     margin-bottom: 10px;
+  }
+  .tourDate .support {
+    font-size: 0.5em;
   }
   .tourDate .top .date {
     @include column(12);
@@ -616,48 +692,6 @@ p.form-allowed-tags, .nocomments { display:none; }
     position: absolute;
     right: 0;
     top: 0;
-  }
-  .socialLink {
-    font-size: 2em;
-    margin: 0 20px;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .container {
-    padding: 0 10px;
-  }
-  .musicWrap {
-    width: 100%;
-    padding: 10px;
-    margin: 0;
-    p {
-      font-size: 0.5em;
-    }
-  }
-  .about, 
-  .music {
-    font-size: 3rem;
-  }
-  .about p {
-    font-size: 0.45em;
-    padding: 10px 0;
-  }
-  .arrow {
-    font-size: 1.5em;
-  }
-  .aboutPic {
-    padding: 0 10px;
-    width: 100%;
-  }
-  .footerByline {
-    font-size: 1em;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .heroText {
-    font-size: 3.5rem;
   }
   .mobileNav {
     display: block;
@@ -671,17 +705,37 @@ p.form-allowed-tags, .nocomments { display:none; }
   }
 }
 
-@media only screen and (max-width: 350px) {
-  html {
-    font-size: 12px;
+@media only screen and (max-width: 500px) {
+  .musicWrap {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
   }
-  .socialLink {
-    margin: 0px 5px;
+  .pressSingle {
+    @include column(12);
+  }
+  .arrow {
+    font-size: 1.5em;
+  }
+  .aboutPic {
+    width: 100%;
+  }
+  // .footerByline {
+  //   font-size: 1em;
+  // }
+  // .contactText {
+  //   font-size: 0.5em;
+  // }
+}
+
+@media only screen and (max-width: 450px) {
+  .heroText {
+    font-size: 3em;
   }
 }
 
-@media only screen and (max-width: 290px) {
-  .socialLink {
-    margin: 0px 3px;
+@media only screen and (max-width: 350px) {
+  html {
+    font-size: 12px;
   }
 }

@@ -1,6 +1,6 @@
 <footer>
 <p class="footerByline">&copy; Saint Clare <?php echo date('Y'); ?> Built by <a href="http://kevinleclair.ca">Kevin LeClair</a></p>
-  <div class="container">
+  <div class="container socialWrap">
 	<?php $latestPosts = new WP_Query(array(
 	'post_type' => 'social', //we only want blog posts
 	'posts_per_page' => -1

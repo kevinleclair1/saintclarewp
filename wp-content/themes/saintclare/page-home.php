@@ -29,7 +29,7 @@ get_header();  ?>
 		<?php  
 			$aboutImage = get_field('about_picture');
 		?>
-		<h3><?php the_title(); ?></h3> 
+		<h4><?php the_title(); ?></h4> 
 		<img class='aboutPic' src="<?php echo $aboutImage['url']; ?>" alt=""> 
 		<?php the_content(); ?>
 		<?php endwhile; //end custom loop?>
@@ -59,7 +59,7 @@ get_header();  ?>
   </section> <!-- end of music -->
   <section class="tour" id="tour">
   	<h4>Tour Dates</h4>
-  	<div class="container tourWrap">
+  	<div class="container tourWrap clearfix">
   		<?php $latestPosts= new WP_Query (array(
   		'post_type' => 'tour',
   		'posts_per_page' => -1
@@ -67,7 +67,7 @@ get_header();  ?>
   		<?php if($latestPosts->have_posts()) while($latestPosts ->have_posts()) : $latestPosts->the_post(); ?>
   			<?php while( has_sub_field('tour') ): ?>
   			  <!-- Our sub fields go here -->
-  			 <div class="tourDate">
+  			 <div class="tourDate clearfix">
   			   	 <div class="top clearfix">
 		  			 <p class="date"><?php the_sub_field('date'); ?></p>
 		  			 <p class"venue"><?php the_sub_field('venue'); ?></p>
@@ -83,6 +83,27 @@ get_header();  ?>
   		<?php wp_reset_postdata(); // return env back to regular?>
   	</div>
   </section> <!-- end of tour -->
+  <section class="press" id="press">
+  	<h4>News</h4>
+  	<div class="container pressWrap clearfix">
+  		<?php $latestPosts= new WP_Query (array(
+  		'post_type' => 'press',
+  		'posts_per_page' => -1
+  		)); ?>
+  		<?php if($latestPosts->have_posts()) while($latestPosts ->have_posts()) : $latestPosts->the_post(); ?>
+  			<div class="pressSingle">
+  				<p class="date"><?php the_field('article_date') ?></p> 
+  				<h5 class="title"><?php the_title() ?></h5> 
+  				<p class="subTitle"><?php the_field('sub_title') ?></p> 
+  				<div class="pressContent">
+	  				<?php the_content() ?>  					
+  				</div>
+  				<a class="pressLink" href="<?php the_field('article_link')?>">Read More...</a>
+  			</div>
+  		<?php endwhile; //end custom loop?>
+  		<?php wp_reset_postdata(); // return env back to regular?>
+  	</div>
+  </section>
   <section class="contact" id="contact">
   	<h4>Contact</h4>
   	<div class="container contactWrap">

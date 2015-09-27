@@ -3,7 +3,7 @@ Theme Name: Saint Clare
 Theme URI: http://hackeryou.com;
 Description: Starter theme for building any website. Created by HackerYou. Rename this to your own theme page.
 Version: 1.0
-Author: HackerYou
+Author: Kevin LeClair
 Author URI: http://hackeryou.com
 */
 body {
@@ -63,7 +63,6 @@ code, kbd, pre, samp {
   font-size: 1em; }
 
 pre {
-  white-space: pre-wrap;
   word-wrap: break-word; }
 
 q {
@@ -241,6 +240,21 @@ pre {
   border-radius: 4px;
   border: 1px solid #ccc; }
 
+section {
+  background: #222222;
+  font-size: 2rem;
+  padding: 30px 0; }
+  section h4 {
+    font-size: 1.3em;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px; }
+
+.container {
+  padding: 0 20px; }
+
 /* =============================================================================
                    Hero
    ========================================================================== */
@@ -262,7 +276,7 @@ pre {
   text-align: center;
   font-size: 4.5rem; }
   .heroText h1 {
-    color: white;
+    color: #fff;
     text-transform: uppercase;
     margin: 10px 0; }
   .heroText h2 {
@@ -304,25 +318,23 @@ pre {
                    About
    ========================================================================== */
 .about {
-  padding-top: 50px;
-  padding-bottom: 50px;
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/about.jpg) no-repeat center center fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/about.jpg) no-repeat center center fixed;
   background-size: cover;
-  font-size: 2.5rem;
+  font-size: 2rem;
   position: relative;
-  color: white; }
+  color: #fff; }
   .about h3 {
     text-align: center;
     text-transform: uppercase;
-    margin-top: 0; }
+    margin-top: 0;
+    margin-bottom: 30px; }
   .about p {
-    font-size: 0.5em;
+    font-size: 0.6em;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    margin: 0 20px;
     margin-top: 20px; }
 
 .aboutPic {
@@ -336,16 +348,7 @@ pre {
 .music {
   background: #222222;
   font-size: 2rem;
-  padding: 50px 0; }
-  .music h4 {
-    font-size: 1.3em;
-    margin: 0;
-    text-transform: uppercase;
-    text-align: center;
-    color: white; }
-
-.stream {
-  padding: 50px 5px; }
+  padding: 30px 0; }
 
 .musicWrap {
   display: inline;
@@ -361,7 +364,7 @@ pre {
     font-weight: 300; }
   .musicWrap h5 {
     text-transform: uppercase;
-    color: white;
+    color: #fff;
     margin: 10px 0; }
 
 /* =============================================================================
@@ -372,36 +375,41 @@ pre {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/tour.jpg) no-repeat center center fixed;
   background-size: cover;
   font-size: 1.5rem;
-  padding: 50px 0;
   position: relative;
-  color: white; }
+  color: #fff; }
   .tour h4 {
     font-size: 1.5em;
     margin: 0;
     margin-bottom: 40px;
     text-transform: uppercase;
     text-align: center;
-    color: white; }
+    color: #fff; }
 
 .tourDate {
   text-transform: uppercase;
   margin-bottom: 20px; }
   .tourDate .support {
+    display: inline;
+    float: left;
+    width: 97.91667%;
+    margin: 0 1.04167%;
     display: block;
-    margin: 0;
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.8em; }
   .tourDate .top {
+    display: inline;
+    float: left;
+    width: 97.91667%;
+    margin: 0 1.04167%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 20px; }
+    display: flex; }
     .tourDate .top p, .tourDate .top .rsvpWrap {
       -webkit-box-flex: 1;
-      -webkit-flex: 1 0 200px;
-          -ms-flex: 1 0 200px;
-              flex: 1 0 200px; }
+      -webkit-flex: 1 0 100px;
+          -ms-flex: 1 0 100px;
+              flex: 1 0 100px; }
     .tourDate .top p:first-child {
       margin-left: 0; }
     .tourDate .top .rsvpWrap {
@@ -411,52 +419,98 @@ pre {
       display: -ms-flexbox;
       display: flex;
       -webkit-box-flex: 0.5;
-      -webkit-flex: 0.5 0 200px;
-          -ms-flex: 0.5 0 200px;
-              flex: 0.5 0 200px;
+      -webkit-flex: 0.5 0 auto;
+          -ms-flex: 0.5 0 auto;
+              flex: 0.5 0 auto;
       text-align: right; }
   .tourDate a {
     padding: 10px 15px;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid #fff;
+    color: #fff;
     -webkit-transition: 0.3s;
             transition: 0.3s;
     font-size: 0.6em;
     margin: auto;
     margin-right: 0; }
     .tourDate a:hover {
-      background: white;
+      background: #fff;
       color: black; }
+
+/* =============================================================================
+                   PRESS
+   ========================================================================== */
+.press {
+  background: #222222;
+  font-size: 2rem; }
+  .press h4 {
+    font-size: 1.3em;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px; }
+
+.pressSingle {
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin: 0 1.04167%; }
+  .pressSingle .date {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.5em;
+    margin-bottom: 0; }
+  .pressSingle .title {
+    text-transform: uppercase;
+    margin: 5px 0;
+    color: #fff; }
+  .pressSingle .subTitle {
+    font-size: 0.5em;
+    color: rgba(255, 255, 255, 0.8); }
+  .pressSingle .pressContent {
+    font-size: 0.6em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300; }
+    .pressSingle .pressContent p {
+      margin: 0; }
+  .pressSingle .pressLink {
+    color: #FEFFC0;
+    text-transform: uppercase;
+    font-size: 0.4em; }
 
 /* =============================================================================
                    CONTACT
    ========================================================================== */
 .contact {
   background: #222222;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 50px 10px;
-  color: white; }
+  font-size: 2rem;
+  padding-top: 0;
+  color: #fff;
+  text-align: center; }
   .contact h4 {
+    padding: 30px 0;
     font-size: 1.5em;
     margin: 0;
-    margin-bottom: 40px;
     text-transform: uppercase;
     text-align: center;
-    color: white; }
+    color: #fff; }
 
 .contactText {
-  font-size: 0.8em;
+  font-size: 0.6em;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300; }
+  .contactText p {
+    margin: 0; }
   .contactText a {
-    color: white;
+    color: #fff;
     padding: 5px;
     -webkit-transition: 0.3s;
             transition: 0.3s; }
     .contactText a:hover {
       color: black;
-      background: white; }
+      background: #fff; }
+  .contactText .contactInfo {
+    margin-bottom: 0;
+    margin-top: 5px; }
 
 /* =============================================================================
                    Sidebar
@@ -479,24 +533,37 @@ footer {
   clear: both;
   background: #222222;
   text-align: center;
-  color: white;
+  color: #fff;
   font-size: 1.5rem;
   position: relative;
   padding: 0 10px; }
   footer .container {
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    margin-top: 20px; }
+
+.socialWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
 
 .socialLink {
   display: inline-block;
-  font-size: 2em;
-  margin: 0 20px; }
+  font-size: 1.5em;
+  margin: auto; }
   .socialLink a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.8);
     -webkit-transition: 0.3s;
             transition: 0.3s; }
     .socialLink a:hover {
-      color: white; }
+      color: #fff; }
 
 .footerByline {
   display: block;
@@ -510,7 +577,7 @@ footer {
     -webkit-transition: 0.3s;
             transition: 0.3s; }
     .footerByline a:hover {
-      color: white; }
+      color: #fff; }
 
 /* =============================================================================
                    Navigation
@@ -524,12 +591,13 @@ header {
   background: none; }
 
 .headerB {
-  background: rgba(0, 0, 0, 0.4); }
+  background: rgba(0, 0, 0, 0.7); }
 
 .mobileNav {
   display: none;
-  font-size: 50px;
-  padding-left: 10px; }
+  font-size: 35px;
+  padding-left: 10px;
+  color: white; }
 
 ul.menu {
   margin: 0;
@@ -539,7 +607,8 @@ ul.menu {
   text-transform: uppercase;
   margin: 10px 0;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  color: #fff; }
 
 ul.menu li {
   display: inline;
@@ -551,7 +620,7 @@ ul.menu li a {
   -webkit-transition: 0.3s;
           transition: 0.3s; }
   ul.menu li a:hover {
-    color: white; }
+    color: #fff; }
 
 /* =============================================================================
                    Comment Styling
@@ -725,11 +794,6 @@ p.form-allowed-tags, .nocomments {
 #respond p, #comments-list ul #respond {
   margin: 0; }
 
-@media only screen and (max-width: 1000px) {
-  .tourDate {
-    margin-left: 20px;
-    margin-right: 20px; } }
-
 @media only screen and (max-width: 800px) {
   .musicWrap {
     display: inline;
@@ -740,7 +804,17 @@ p.form-allowed-tags, .nocomments {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 130px;
         -ms-flex: 1 0 130px;
-            flex: 1 0 130px; } }
+            flex: 1 0 130px; }
+  .tourDate .top .venue {
+    -webkit-box-flex: 2;
+    -webkit-flex: 2 0 130px;
+        -ms-flex: 2 0 130px;
+            flex: 2 0 130px; }
+  .pressSingle {
+    display: inline;
+    float: left;
+    width: 47.91667%;
+    margin: 0 1.04167%; } }
 
 @media only screen and (max-width: 600px) {
   html {
@@ -752,7 +826,7 @@ p.form-allowed-tags, .nocomments {
   .tourDate .top {
     display: block;
     position: relative;
-    font-size: 0.9em; }
+    font-size: 0.6em; }
   .tourDate .top p {
     display: inline;
     float: left;
@@ -760,6 +834,8 @@ p.form-allowed-tags, .nocomments {
     margin: 0 1.04167%;
     margin-left: 0;
     margin-bottom: 10px; }
+  .tourDate .support {
+    font-size: 0.5em; }
   .tourDate .top .date {
     display: inline;
     float: left;
@@ -770,35 +846,6 @@ p.form-allowed-tags, .nocomments {
     position: absolute;
     right: 0;
     top: 0; }
-  .socialLink {
-    font-size: 2em;
-    margin: 0 20px; } }
-
-@media only screen and (max-width: 500px) {
-  .container {
-    padding: 0 10px; }
-  .musicWrap {
-    width: 100%;
-    padding: 10px;
-    margin: 0; }
-    .musicWrap p {
-      font-size: 0.5em; }
-  .about, .music {
-    font-size: 3rem; }
-  .about p {
-    font-size: 0.45em;
-    padding: 10px 0; }
-  .arrow {
-    font-size: 1.5em; }
-  .aboutPic {
-    padding: 0 10px;
-    width: 100%; }
-  .footerByline {
-    font-size: 1em; } }
-
-@media only screen and (max-width: 450px) {
-  .heroText {
-    font-size: 3.5rem; }
   .mobileNav {
     display: block; }
   ul.menu {
@@ -807,12 +854,25 @@ p.form-allowed-tags, .nocomments {
     ul.menu li {
       display: block; } }
 
+@media only screen and (max-width: 500px) {
+  .musicWrap {
+    width: 100%;
+    padding: 10px;
+    margin: 0; }
+  .pressSingle {
+    display: inline;
+    float: left;
+    width: 97.91667%;
+    margin: 0 1.04167%; }
+  .arrow {
+    font-size: 1.5em; }
+  .aboutPic {
+    width: 100%; } }
+
+@media only screen and (max-width: 450px) {
+  .heroText {
+    font-size: 3em; } }
+
 @media only screen and (max-width: 350px) {
   html {
-    font-size: 12px; }
-  .socialLink {
-    margin: 0px 5px; } }
-
-@media only screen and (max-width: 290px) {
-  .socialLink {
-    margin: 0px 3px; } }
+    font-size: 12px; } }
